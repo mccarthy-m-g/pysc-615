@@ -1,0 +1,71 @@
+---
+title             : "Assignment 1"
+shorttitle        : "Assignment 1"
+
+author: 
+  - name          : "Michael McCarthy"
+    affiliation   : "1"
+    email         : "michael.mccarthy@ucalgary.ca"
+
+affiliation:
+  - id            : "1"
+    institution   : "University of Calgary"
+
+authornote: |
+  This assignment was written in R Markdown using `r papaja::cite_r("r-references.bib")`.
+
+bibliography      : ["r-references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_docx
+
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'McCarthy_Michael_Assignment_1.docx')) })
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib", append = FALSE)
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(echo = TRUE, cache.extra = knitr::rand_seed)
+```
+
+# Questions
+
+## Question 1
+> Question
+
+Answer
+
+## Question 2
+> Question
+
+Answer
+
+## Question 3
+> Question
+
+Answer
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
